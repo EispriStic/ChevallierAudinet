@@ -2,7 +2,7 @@
 
 ## Objectif du jeu
 
-Ta soeur se fait kidnapper pazr des pirates de l'espace, sauras tu la sauver.
+Ta soeur se fait kidnapper par des pirates de l'espace, sauras tu la sauver.
 
 ## Déscription
 
