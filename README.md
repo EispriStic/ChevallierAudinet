@@ -1,3 +1,3 @@
 # ChevallierAudinet
 
-Jeux creé par Baptiste et Jules
+Jeux creé par Baptiste, Jules et Enzo
