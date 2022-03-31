@@ -1,4 +1,4 @@
-# ChevallierAudinet
+# ChevallierAudinetMauti
 
 ## Objectif du jeu
 
