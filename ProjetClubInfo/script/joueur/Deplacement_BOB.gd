@@ -20,6 +20,7 @@ func _physics_process(_delta):
 		velocity.y = -jump_speed
 
 	# Partie Shoot
+	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("shoot") and peutTirer == true:
 		var balleInstance = balle.instance()
 		balleInstance.position = get_global_position()
