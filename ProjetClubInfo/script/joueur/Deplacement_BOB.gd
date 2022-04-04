@@ -11,6 +11,7 @@ var balle = preload("res://Scenes/joueur/balle.tscn")
 var peutTirer = true
 var velocity = Vector2()
 
+	# Partie Déplacement 
 func _physics_process(_delta):
 	velocity.x = (int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))) * speed 
 	
