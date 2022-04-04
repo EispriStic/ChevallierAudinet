@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Sprites/bird (1).png" type="Texture" id=1]
-[ext_resource path="res://script/joueur/Deplacement_BOB.gd" type="Script" id=2]
+[ext_resource path="res://script/joueur/Player.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 83.0542
 
 [node name="BOB" type="KinematicBody2D"]
-position = Vector2( -29, 56 )
+position = Vector2( 242, 210 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 

@@ -13,24 +13,24 @@ var velocity = Vector2()
 
 	# Partie Déplacement 
 func _physics_process(_delta):
-	velocity.x = (int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))) * speed 
+	move()
+	shoot()
 	
+
+func shoot():
+	
+	if Input.is_action_pressed("shoot") and peutTirer == true:
+		var balleInstance = balle.instance()
+		balleInstance.global_position = $Position2D.global_position
+		$".".add_child(balleInstance)
+		peutTirer = false
+		yield(get_tree().create_timer(balleRate), "timeout")
+		peutTirer = true
+		
+func move():
+	velocity.x = (int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))) * speed 
 	velocity.y += gravity 
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	if is_on_floor() and Input.is_action_just_pressed("jump") :
 		velocity.y = -jump_speed
 
-	# Partie Shoot
-	look_at(get_global_mouse_position())
-	if Input.is_action_pressed("shoot") and peutTirer == true:
-		var balleInstance = balle.instance()
-		balleInstance.position = get_global_position()
-		balleInstance.apply_impulse(Vector2(),Vector2(balleVit,0).rotated(rotation))
-		get_tree().get_root().add_child(balleInstance)
-		peutTirer = false
-		yield(get_tree().create_timer(balleRate), "timeout")
-		peutTirer = true
-		
-		
-		
-		
