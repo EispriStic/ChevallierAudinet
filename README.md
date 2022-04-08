@@ -6,7 +6,11 @@ Ta soeur se fait kidnapper par des pirates de l'espace, sauras tu la sauver.
 
 ## Déscription
 
-Metroidvania/plateformer 
+plateformer 
 <hr>
 Jeux créé par Baptiste, Jules et Enzo
+
+## DEV
+
+1er Séance : Documentation 
 
