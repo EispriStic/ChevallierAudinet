@@ -25,10 +25,10 @@ func rotateLevel():
 	
 	if point >= 1 :
 
-		$TileSolid.rotation_degrees += 0.1 * directionRot
-		$TileOneWay.rotation_degrees += 0.1 * directionRot
+		$TileSolid.rotation_degrees += 0.01 * directionRot
+		$TileOneWay.rotation_degrees += 0.01 * directionRot
 		
-		if $TileSolid.rotation_degrees > 10 :
+		if $TileSolid.rotation_degrees > 5 :
 			directionRot = -1
-		elif $TileSolid.rotation_degrees < -10 :
+		elif $TileSolid.rotation_degrees < -5 :
 			directionRot = 1
