@@ -2,7 +2,7 @@
 
 ## Objectif du jeu
 
-Ta soeur se fait kidnapper par des pirates de l'espace, sauras tu la sauver.
+Se cuiter
 
 ## Déscription
 
@@ -14,3 +14,4 @@ Jeux créé par Baptiste, Jules et Enzo
 
 1er Séance : Documentation 
 
+2eme Séance : Documentation + prog
