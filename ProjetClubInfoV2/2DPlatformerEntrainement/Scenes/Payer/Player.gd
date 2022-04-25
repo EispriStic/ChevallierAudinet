@@ -34,9 +34,15 @@ func _physics_process(_delta):
 
 
 func _on_FallZone_body_entered(body):
-	get_tree().change_scene("res://Scenes/Level1/Level1.tscn")
+	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
 	
 
 func ouch():
 	set_modulate(Color(1,0.3,0.3,1))
+	$Timer.start()
 #	velocity.y = JUMPFORCE * 0.7
+
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
