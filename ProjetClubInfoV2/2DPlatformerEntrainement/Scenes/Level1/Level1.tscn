@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Assets/Objects/Steampunk Blocks.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Payer/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Assets/HUD/coin_gold.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Level1/HUD.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/ennemi/ennemi.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=58]
 
@@ -1055,6 +1056,12 @@ position = Vector2( 2816, 832 )
 
 [node name="Coin4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 576, 1216 )
+
+[node name="ennemies" type="Node2D" parent="."]
+
+[node name="KinematicBody2D" parent="ennemies" instance=ExtResource( 14 )]
+position = Vector2( 1472, 192 )
+direction = 1
 
 [connection signal="body_entered" from="FallZone" to="Player" method="_on_FallZone_body_entered"]
 [connection signal="coin_collected" from="Coin1" to="HUD" method="_on_coin_collected"]
