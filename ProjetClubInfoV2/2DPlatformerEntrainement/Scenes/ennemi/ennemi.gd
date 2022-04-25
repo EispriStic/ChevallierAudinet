@@ -28,5 +28,5 @@ func _physics_process(delta):
 
 
 func _on_sideChecker_body_entered(body):
-	print("collision")
 	body.ouch()
+	$Soundreperer.play()

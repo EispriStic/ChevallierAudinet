@@ -8,6 +8,7 @@ func _ready():
 func _on_coin_collected():
 	coins += 1
 	_ready()
+	
 	if coins == 4:
 		get_tree().change_scene("res://Scenes/Gagne/Gagne.tscn")
 

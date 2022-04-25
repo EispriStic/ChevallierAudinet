@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/fonts/more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/UI/grey_button04.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/grey_button13.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Menu Titre/PlayButton.gd" type="Script" id=4]
+[ext_resource path="res://Assets/music/Swinging Pants.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 90
@@ -131,5 +132,10 @@ custom_fonts/font = SubResource( 4 )
 text = "BOIS !"
 flat = true
 script = ExtResource( 4 )
+
+[node name="MusicMenuTitre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
