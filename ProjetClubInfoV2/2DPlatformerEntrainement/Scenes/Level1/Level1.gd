@@ -8,10 +8,10 @@ var directionRot = 1
 var direction = 1
 
 func _ready():
-	coin1.connect("ajoutPoint",self,"addPoint")
-	coin2.connect("ajoutPoint",self,"addPoint")
-	coin3.connect("ajoutPoint",self,"addPoint")
-	
+	$Coin1.connect("ajoutPoint",self,"addPoint")
+	$Coin2.connect("ajoutPoint",self,"addPoint")
+	$Coin3.connect("ajoutPoint",self,"addPoint")
+	$Coin4.connect("ajoutPoint",self,"addPoint")
 	
 func _process(delta):
 	

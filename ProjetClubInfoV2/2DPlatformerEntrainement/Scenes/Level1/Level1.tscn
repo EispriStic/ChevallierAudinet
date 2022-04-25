@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Assets/Objects/Steampunk Blocks.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Payer/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Assets/background/Flou.png" type="Texture" id=8]
 [ext_resource path="res://Assets/background/Steampunk Corse Elements Dark.png" type="Texture" id=9]
 [ext_resource path="res://Assets/background/Steampunk Corse Elements.png" type="Texture" id=10]
+[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Assets/HUD/coin_gold.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Level1/HUD.gd" type="Script" id=13]
 
 [sub_resource type="TileSet" id=58]
 
@@ -841,6 +844,21 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 64, 0, 64 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 3702, 66.5 )
 
+[sub_resource type="StyleBoxFlat" id=66]
+bg_color = Color( 0.027451, 0.0117647, 0.0117647, 0.247059 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=67]
+size = 52
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=68]
+size = 60
+font_data = ExtResource( 11 )
+
 [node name="Level1" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -982,15 +1000,6 @@ __meta__ = {
 position = Vector2( 3692, 56.5 )
 shape = SubResource( 3 )
 
-[node name="Coin1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1159, 508 )
-
-[node name="Coin2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2377, 328 )
-
-[node name="Coin3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1565, 326 )
-
 [node name="flou" type="Sprite" parent="."]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.541176 )
@@ -998,4 +1007,57 @@ position = Vector2( 1529, 420 )
 scale = Vector2( 96.5625, 27.25 )
 texture = ExtResource( 8 )
 
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 13 )
+
+[node name="panel" type="Panel" parent="HUD"]
+margin_left = 25.0
+margin_top = 17.0
+margin_right = 262.0
+margin_bottom = 112.0
+custom_styles/panel = SubResource( 66 )
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 52.0
+margin_top = 33.0
+margin_right = 113.0
+margin_bottom = 94.0
+texture = ExtResource( 12 )
+expand = true
+
+[node name="X" type="Label" parent="HUD"]
+margin_left = 126.0
+margin_top = 35.0
+margin_right = 181.0
+margin_bottom = 98.0
+custom_colors/font_color = Color( 1, 0.8, 0.113725, 1 )
+custom_fonts/font = SubResource( 67 )
+text = "x"
+
+[node name="COINS" type="Label" parent="HUD"]
+margin_left = 164.0
+margin_top = 33.0
+margin_right = 242.0
+margin_bottom = 105.0
+custom_colors/font_color = Color( 1, 0.8, 0.113725, 1 )
+custom_fonts/font = SubResource( 68 )
+text = "##"
+valign = 1
+
+[node name="Coin1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1152, 448 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4160, 1024 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2816, 832 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 576, 1216 )
+
 [connection signal="body_entered" from="FallZone" to="Player" method="_on_FallZone_body_entered"]
+[connection signal="coin_collected" from="Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin4" to="HUD" method="_on_coin_collected"]

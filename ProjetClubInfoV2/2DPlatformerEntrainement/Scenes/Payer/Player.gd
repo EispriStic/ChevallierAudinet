@@ -31,15 +31,10 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity,Vector2.UP)
 	
 	velocity.x = lerp(velocity.x,0,0.20)
-	
-	if coins == 3:
-		get_tree().change_scene("res://Scenes/Level1/Level1.tscn")
 
 
 func _on_FallZone_body_entered(body):
 	get_tree().change_scene("res://Scenes/Level1/Level1.tscn")
 	
-func add_coins():
-	coins += 1
-	#print("pieces : ", coins)
+
 	
