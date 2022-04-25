@@ -37,4 +37,6 @@ func _on_FallZone_body_entered(body):
 	get_tree().change_scene("res://Scenes/Level1/Level1.tscn")
 	
 
-	
+func ouch():
+	set_modulate(Color(1,0.3,0.3,1))
+#	velocity.y = JUMPFORCE * 0.7
