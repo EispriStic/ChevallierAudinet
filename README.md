@@ -1,4 +1,4 @@
-# ChevallierAudinetMauti
+# Zébu
 
 ## Objectif du jeu
 
