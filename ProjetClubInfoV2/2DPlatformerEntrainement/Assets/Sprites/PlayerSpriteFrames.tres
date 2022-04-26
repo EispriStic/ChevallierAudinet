@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=11 format=2]
+[gd_resource type="SpriteFrames" load_steps=14 format=2]
 
 [ext_resource path="res://Assets/coin/Player_IDLE_0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/coin/Player_walk_3.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Assets/coin/Player_walk_4.png" type="Texture" id=8]
 [ext_resource path="res://Assets/coin/Player_walk_1.png" type="Texture" id=9]
 [ext_resource path="res://Assets/coin/Player_walk_0.png" type="Texture" id=10]
+[ext_resource path="res://Assets/coin/Player_Drink_2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/coin/Player_Drink_0.png" type="Texture" id=12]
+[ext_resource path="res://Assets/coin/Player_Drink_1.png" type="Texture" id=13]
 
 [resource]
 animations = [ {
@@ -23,18 +26,23 @@ animations = [ {
 "name": "climb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "air",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "drink",
 "speed": 5.0
 } ]

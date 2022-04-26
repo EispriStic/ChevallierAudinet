@@ -47,3 +47,7 @@ func ouch():
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
+	
+
+func _on_coin_collected():
+	$Sprite.play("drink")
