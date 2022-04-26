@@ -11,7 +11,7 @@
 [ext_resource path="res://Assets/background/Steampunk Corse Elements Dark.png" type="Texture" id=9]
 [ext_resource path="res://Assets/background/Steampunk Corse Elements.png" type="Texture" id=10]
 [ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Assets/HUD/coin_gold.png" type="Texture" id=12]
+[ext_resource path="res://Assets/HUD/BouteilleHUD.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Level1/HUD.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/ennemi/ennemi.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/music/Retro Beat.ogg" type="AudioStream" id=15]

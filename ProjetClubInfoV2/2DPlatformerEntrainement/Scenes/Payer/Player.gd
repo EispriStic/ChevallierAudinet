@@ -20,8 +20,8 @@ func _physics_process(_delta):
 	else:
 		$Sprite.play("idle")
 		
-	if not is_on_floor():
-		$Sprite.play("air")
+#	if not is_on_floor():
+#		$Sprite.play("air")
 	
 	velocity.y += gravity
 
