@@ -34,15 +34,16 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 color = Color( 0.0196078, 0.101961, 0.0627451, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 318.0
-margin_top = 58.0
-margin_right = 731.0
-margin_bottom = 199.0
+margin_left = 566.0
+margin_top = 70.0
+margin_right = 979.0
+margin_bottom = 211.0
+rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0.827451, 0.827451, 0.827451, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "ZEBU"
@@ -50,10 +51,11 @@ align = 1
 valign = 1
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 16.0
-margin_top = 414.0
-margin_right = 326.0
-margin_bottom = 581.0
+margin_left = 104.0
+margin_top = 634.0
+margin_right = 414.0
+margin_bottom = 801.0
+rect_scale = Vector2( 2, 2 )
 custom_styles/panel = SubResource( 2 )
 
 [node name="Jump" type="TextureRect" parent="Panel"]
@@ -123,10 +125,11 @@ align = 1
 valign = 1
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 365.0
-margin_top = 224.0
-margin_right = 685.0
-margin_bottom = 337.0
+margin_left = 669.0
+margin_top = 344.0
+margin_right = 989.0
+margin_bottom = 457.0
+rect_scale = Vector2( 2, 2 )
 custom_colors/font_color_hover = Color( 0.4, 0.580392, 0.407843, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "BOIS !"

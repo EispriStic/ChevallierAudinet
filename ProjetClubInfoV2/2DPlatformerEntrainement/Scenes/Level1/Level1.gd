@@ -15,8 +15,8 @@ func _ready():
 	
 func _process(delta):
 	
-	rotateLevel()
-	
+	#rotateLevel()
+	pass
 func addPoint():
 	
 	point += 1
@@ -25,8 +25,8 @@ func rotateLevel():
 	
 	if point >= 1 :
 
-		$TileSolid.rotation_degrees += 0.01 * directionRot
-		$TileOneWay.rotation_degrees += 0.01 * directionRot
+		$TileSolid.rotation_degrees += 0.001 * directionRot
+		$TileOneWay.rotation_degrees += 0.001 * directionRot
 		
 		if $TileSolid.rotation_degrees > 2.5 :
 			directionRot = -1
