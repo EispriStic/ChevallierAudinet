@@ -14,6 +14,8 @@ func _on_Coin_body_entered(body):
 	
 	$SoundRot.play()
 	
+	body.drink()
+	
 
 
 

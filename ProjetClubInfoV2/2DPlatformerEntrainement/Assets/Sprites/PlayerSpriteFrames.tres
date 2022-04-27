@@ -31,18 +31,18 @@ animations = [ {
 "name": "air",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "drink",
+"name": "boire",
 "speed": 5.0
 } ]

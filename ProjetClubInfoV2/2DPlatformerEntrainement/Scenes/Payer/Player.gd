@@ -2,22 +2,23 @@ extends KinematicBody2D
 
 var velocity = Vector2(0,0)
 var coins = 0
+var can_move = true
 
 const SPEED = 400
 const JUMPFORCE = -1250
 const gravity = 65
 func _physics_process(_delta):
 	
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") and can_move:
 		velocity.x = SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = false
-	elif Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left")and can_move:
 		velocity.x = -SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = true
 		
-	else:
+	elif can_move:
 		$Sprite.play("idle")
 		
 #	if not is_on_floor():
@@ -25,7 +26,7 @@ func _physics_process(_delta):
 	
 	velocity.y += gravity
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and can_move:
 		velocity.y = JUMPFORCE
 		$soundJump.play()
 	
@@ -49,5 +50,15 @@ func _on_Timer_timeout():
 	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
 	
 
-func _on_coin_collected():
-	$Sprite.play("drink")
+func drink():
+	$move.start()
+	can_move = false
+	$Sprite.play("boire")
+	print("boire")
+
+	
+
+
+
+func _on_move_timeout():
+	can_move = true
