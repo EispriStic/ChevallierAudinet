@@ -56,9 +56,5 @@ func drink():
 	$Sprite.play("boire")
 	print("boire")
 
-	
-
-
-
 func _on_move_timeout():
 	can_move = true

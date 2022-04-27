@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://Assets/Objects/Steampunk Blocks.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Payer/Player.tscn" type="PackedScene" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_2.png" type="Texture" id=22]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_5.png" type="Texture" id=23]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_6.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Level1/timer.gd" type="Script" id=25]
+[ext_resource path="res://Assets/fonts/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=26]
 
 [sub_resource type="TileSet" id=58]
 
@@ -878,6 +880,10 @@ font_data = ExtResource( 11 )
 size = 60
 font_data = ExtResource( 11 )
 
+[sub_resource type="DynamicFont" id=71]
+size = 30
+font_data = ExtResource( 26 )
+
 [node name="Level1" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -1062,6 +1068,14 @@ custom_colors/font_color = Color( 1, 0.8, 0.113725, 1 )
 custom_fonts/font = SubResource( 68 )
 text = "##"
 valign = 1
+
+[node name="timer" type="Label" parent="HUD"]
+margin_left = 694.0
+margin_top = 55.0
+margin_right = 981.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 71 )
+script = ExtResource( 25 )
 
 [node name="Coin1" parent="." instance=ExtResource( 6 )]
 position = Vector2( 346, 1465 )

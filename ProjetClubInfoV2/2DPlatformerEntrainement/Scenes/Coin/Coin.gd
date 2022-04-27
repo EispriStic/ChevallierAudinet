@@ -15,9 +15,6 @@ func _on_Coin_body_entered(body):
 	$SoundRot.play()
 	
 	body.drink()
-	
-
-
 
 func _on_SoundRot_finished():
 	queue_free()
