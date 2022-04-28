@@ -1449,7 +1449,6 @@ shape = SubResource( 3 )
 script = ExtResource( 13 )
 
 [node name="Sprite" type="AnimatedSprite" parent="HUD"]
-visible = false
 position = Vector2( 514, 289.5 )
 scale = Vector2( 0.667969, 0.544922 )
 frames = SubResource( 69 )
