@@ -58,3 +58,5 @@ func drink():
 
 func _on_move_timeout():
 	can_move = true
+	
+

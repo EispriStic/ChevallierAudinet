@@ -20,27 +20,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_right = 1024.0
+margin_bottom = 600.0
 color = Color( 0.278431, 0.25098, 0.25098, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 432.0
-margin_top = 66.0
-margin_right = 987.0
-margin_bottom = 196.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 264.0
+margin_top = 58.0
+margin_right = 819.0
+margin_bottom = 188.0
 custom_fonts/font = SubResource( 1 )
 text = "En dégrisement !"
 align = 1
 valign = 1
 
 [node name="Restart" type="Button" parent="."]
-margin_left = 775.0
-margin_top = 360.0
-margin_right = 944.0
-margin_bottom = 396.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 435.0
+margin_top = 236.0
+margin_right = 604.0
+margin_bottom = 272.0
 custom_colors/font_color_hover = Color( 0.6, 0.372549, 0.372549, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Rejouer"
@@ -48,13 +46,13 @@ flat = true
 script = ExtResource( 2 )
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 766.0
-margin_top = 558.0
-margin_right = 942.0
-margin_bottom = 594.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 431.0
+margin_top = 319.0
+margin_right = 607.0
+margin_bottom = 355.0
 custom_fonts/font = SubResource( 3 )
 text = "Quitter"
 flat = true
 
 [connection signal="pressed" from="Restart" to="Restart" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Quit" to="Restart" method="_on_Quit_pressed"]

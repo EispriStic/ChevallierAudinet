@@ -21,14 +21,17 @@ func addPoint():
 	
 	point += 1
 
-func rotateLevel():
-	
-	if point >= 1 :
+#func rotateLevel():
+#
+#	if point >= 1 :
+#
+##		$TileSolid.rotation_degrees += 0.001 * directionRot
+##		$TileOneWay.rotation_degrees += 0.001 * directionRot
+##
+##		if $TileSolid.rotation_degrees > 0.1 :
+##			directionRot = -1
+##		elif $TileSolid.rotation_degrees < 0.1 :
+##			directionRot = 1
 
-		$TileSolid.rotation_degrees += 0.001 * directionRot
-		$TileOneWay.rotation_degrees += 0.001 * directionRot
-		
-		if $TileSolid.rotation_degrees > 0.1 :
-			directionRot = -1
-		elif $TileSolid.rotation_degrees < 0.1 :
-			directionRot = 1
+
+	
