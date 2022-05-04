@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Payer/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Objects/Steampunk Brick Back.png" type="Texture" id=3]
 [ext_resource path="res://Assets/background/âPngtreeâbackground of a sunset landscape_1160342.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sounds/Ludum Dare 38 - Track 6.wav" type="AudioStream" id=5]
 [ext_resource path="res://Scenes/Coin/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Level1/Level1.gd" type="Script" id=7]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_7.png" type="Texture" id=8]
@@ -13,7 +14,6 @@
 [ext_resource path="res://Assets/HUD/BouteilleHUD.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Level1/HUD.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/ennemi/ennemi.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/music/Retro Beat.ogg" type="AudioStream" id=15]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_8.png" type="Texture" id=16]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_3.png" type="Texture" id=17]
 [ext_resource path="res://Assets/coin/closeeyes_CloseEyes_9.png" type="Texture" id=18]
@@ -1498,16 +1498,16 @@ custom_fonts/font = SubResource( 71 )
 script = ExtResource( 25 )
 
 [node name="Coin1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 7666, 857 )
+position = Vector2( 7638, 857 )
 
 [node name="Coin2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2108, 92 )
+position = Vector2( 296, 2204 )
 
 [node name="Coin3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3242, -224 )
+position = Vector2( 2093, 102 )
 
 [node name="Coin4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 294, 2196 )
+position = Vector2( 3211, -203 )
 
 [node name="ennemies" type="Node2D" parent="."]
 
@@ -1554,16 +1554,20 @@ position = Vector2( 1074, 2242 )
 position = Vector2( 1788, 2244 )
 
 [node name="MusicLevel" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 5 )
 volume_db = -12.0
 autoplay = true
 
 [connection signal="body_entered" from="FallZone" to="Player" method="_on_FallZone_body_entered"]
 [connection signal="coin_collected" from="Coin1" to="Player" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin1" to="HUD/timer" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin2" to="Player" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin2" to="HUD/timer" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin3" to="Player" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin3" to="HUD/timer" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin4" to="Player" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin4" to="HUD/timer" method="_on_Coin_coin_collected"]
